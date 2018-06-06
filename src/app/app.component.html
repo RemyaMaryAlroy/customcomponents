@@ -1,7 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div style="text-align: center;
+    border: 2px solid black;height: 248px;
+    margin-top: 25px;">
   <app-pagination [totalNoOfPages]='totalNoOfPages' [_currentPage]='_currentPage'></app-pagination>
-	Total No Of Pages:<input type="text" [(ngModel)]='totalNoOfPages' class="form-control" style="width:50px;">
-	Current Page:<input type="text" [(ngModel)]='_currentPage' class="form-control" style="width:50px;">
+	Total No Of Pages:<input type="text" [(ngModel)]='totalNoOfPages' class="form-control" style="width:50px;display:inline-block;align:center;">
+	Current Page:<input type="text" [(ngModel)]='_currentPage' class="form-control" style="width:50px;display:inline-block;align:center;"><br/>
+	Pagination Component works based on the input of total no:of pages , current page.<br/>
+	It can be used in any of the parent component giving the related input data.
 	
+</div>
+<div style="text-align: center;
+    border: 2px solid black;height: 500px;
+    margin-top: 25px;">
+<app-dragnddrop [newItem]='newItem'></app-dragnddrop>
+	Add a New Item :<input type="text" [(ngModel)]='newItem' class="form-control" style="width:50px;display:inline-block;align:center;">
+	<br/>
+	Sorting Component Working:<br/>
+	    1. Add new item to aviable colums through input box<br/>
+	    2. We can drag and drop the item in list one to list 2 and vice-versa<br/>
+     	3. We can arrange the sorting of each column ascending and descending by changing the up-arrow and down-arrow.
 </div>

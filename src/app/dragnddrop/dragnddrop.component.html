@@ -1,0 +1,37 @@
+
+<div  class="form-group has-value">
+  <div  style="padding-bottom: 0px; text-align:center;">
+    <b> Case Sort</b>
+  </div>
+  <div class="modal-body">
+    <div class="container-fluid" style="padding-left: 10%;padding-right: 10%;">
+      <div class="row" style="margin-right: 207px;">
+        <div class="sorterIcon">
+          <a (click)="arrowCheck('up')">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </a>
+          <a (click)="arrowCheck('down')">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+          </a>
+        </div>
+      </div>
+     
+        
+        <div class="col-xs-6 source" id="src"  (drop)="ondrop1($event);" (dragstart)="ondrag($event);" style="margin-left: 224px;">
+			<span style="text-align:center;">Available Columns</span>
+            <div *ngFor="let item of list1;let i=index;"  [id]="i"  draggable="true"(drop)="dropdiv1($event);">{{item.name}}</div>
+        </div>
+        <div class="col-xs-6 destination"  id="dest"  (drop)="ondrop($event);" (dragstart)="ondrag1($event);">
+			<span  style="text-align:center;">Sortable Columns</span>
+            <div *ngFor="let item of list2;let i=index;" [id]="i" [ngStyle]="{'background-color':checkColor(i)}" (click)="checkid($event);" draggable="true" (drop)="dropdiv($event);"  (dragstart)="getdragdiv($event);" ><a style="margin-right:20px;" href="#"><span [ngClass]='getArrow(i)' ></span></a>{{item.name}}</div>
+        </div>
+        
+  </div>
+  </div>
+  <div class="modal-footer">
+    <div class="row" style="text-align: center;margin-right:2.7%;">
+      
+    </div>
+
+  </div>
+</div>

@@ -1,3 +1,4 @@
+
 import { Component, Input, OnInit,Output, ElementRef, EventEmitter, SimpleChanges, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR,FormsModule,ReactiveFormsModule } from '@angular/forms';
 
@@ -16,26 +17,11 @@ export class PaginationComponent implements OnInit {
 
     paginationArray = [];
     continueMarker = '...';
-    get metadata(): any {
-        return [
-            {
-                label: 'totalNoOfPages',
-                type: Number,
-                default: 1
-            },
-            {
-                label: '_currentPage',
-                type: Number,
-                default: 1,
-                output: true,
-            }
-        ];
-    }
-
     constructor(private elRef: ElementRef) {
        
     }
     ngOnInit() {
+	console.log(this.totalNoOfPages);
         this.arrangePagination();
     }
 
@@ -67,6 +53,7 @@ export class PaginationComponent implements OnInit {
     ngOnChanges(changes: SimpleChanges): void {
         if (changes['totalNoOfPages']) {
             if (this.totalNoOfPages != null && this.totalNoOfPages != undefined) {
+			   console.log("hi");
                 this.arrangePagination();
             }
             else {

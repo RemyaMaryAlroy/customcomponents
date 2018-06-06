@@ -4,12 +4,14 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR,FormsModule,ReactiveFormsModule
 import { AppComponent } from './app.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { DocumentAddComponent } from './document-add/document-add.component';
+import { DragnddropComponent } from './dragnddrop/dragnddrop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginationComponent,
-    DocumentAddComponent
+    DocumentAddComponent,
+    DragnddropComponent
 	
   ],
   imports: [

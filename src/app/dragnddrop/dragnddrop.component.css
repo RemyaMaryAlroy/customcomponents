@@ -1,0 +1,46 @@
+
+
+.source>div div:hover{
+    background-color:#e6e6e6;
+    cursor:grab;
+}
+
+.destination>div:hover{
+    background-color:#0095ff47;
+     cursor:move; 
+} 
+.active{
+    background-color:#0095ff47;
+}
+.sorterIcon
+{
+  text-align: right;padding-right:1.6%;
+}
+.headingSort
+{
+text-align:center;font-weight: bold;font-size: 17px;color:black;padding-bottom:0px;
+}
+.firstColumnTtile{
+    padding-bottom: 0px; text-align:center;font-weight: bold;font-size:14px;color:black;
+}
+.secondColumnTitle div
+{
+    padding-bottom: 0px; ;font-weight: bold;font-size:14px;color:black;
+}
+
+.source
+{
+    border: 1px solid black;background-color: white;overflow-y: scroll;width:25%;height:250px;border-radius: 3px;display: inline-block;
+}
+
+.destination{
+    margin-left: 19px;border: 1px solid black;width:25%;;height: 250px;background-color: white;overflow-y: scroll;border-radius: 3px;padding-right:5px;overflow-x:hidden;display: inline-block;
+}
+@media (max-width:417px){
+    .destination{
+        width:46%;
+    }
+    
+}
+
+
