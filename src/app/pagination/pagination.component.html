@@ -1,0 +1,22 @@
+<fieldset class="form-group has-value" >
+	Pagination Component
+    <nav>
+        <ul class="pagination" >
+            <li [ngClass]="getPrevArrowClasses()"style="">
+                <a (click)="previousPage()">
+                    <div class="">&laquo;</div>
+                </a>
+            </li>                    
+            <li *ngFor="let x of paginationArray;let ix = index" [ngClass]="findCurrentPage(x)" style="display:inline-block;"><a (click)="clickedPage(x)"><span>{{x}}</span></a></li>
+            <li [ngClass]="getNextArrowClasses()" style="display:inline-block;">
+                <a (click)="nextPage()">
+                    <div class="">&raquo;</div>
+                </a>
+            </li>            
+        </ul>
+		
+		
+		
+    </nav>
+</fieldset>
+
